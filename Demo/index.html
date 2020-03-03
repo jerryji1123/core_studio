@@ -4,6 +4,24 @@
 	<title></title>
 <script src="https://d3js.org/d3.v5.min.js"></script>
 </head>
+<style type="text/css">
+
+body,html{
+	font-family:'Helvetica Neue',sans-serif;
+}
+
+.card {
+	background-color:#f2f2f2;
+	width:40%;
+	height:10%;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	margin:2%;
+	display: inline-flex;
+	vertical-align: top;
+}
+</style>
 <body>
 
 <div id="main"></div>
@@ -11,7 +29,7 @@
 </body>
 <script type="text/javascript">
 	
-d3.csv('https://raw.githubusercontent.com/jerryji1123/core_studio/master/Demo/All-Warriors%20vs.%20Nets.%202_6_20%20-%20Sheet1%20(1).csv')
+d3.csv('https://raw.githubusercontent.com/jerryji1123/core_studio/master/Demo/All-Warriors%20vs.%20Nets.%202_6_20%20-%20Sheet1%20(2).csv')
 	.then(
 		function(data){
 			console.log(data)
@@ -29,14 +47,19 @@ function viewData (data, location_id) {
 	//write everything as text to this location
 
 	//select just one item and it's name
-	//el.innerHTML = data [0]['Guest Team: Warriors']
+	//el.innerHTML = data [0]['The Name of Player']
 
 	//iterate over each item and do something with its attributes
 	data.forEach(function(item){
-		el.innerHTML += item['Guest Team: Warriors']
+		div =document.createElement('div')
+		div.setAttribute('class','card')
+
+		el.innerHTML += item['The Name of Player']
+
 		h1 = document.createElement('h1')
-		h1.innerHTML=item ['name']
-		el.appendChild(h1)
+		h1.innerHTML=item ['The Name of Player']
+		div.appendChild(h1)
+		el.appendChild(div)
 
 	})
 }
