@@ -21,6 +21,8 @@ body,html{
 	display: inline-flex;
 	vertical-align: top;
 }
+
+.
 </style>
 <body>
 
@@ -29,7 +31,7 @@ body,html{
 </body>
 <script type="text/javascript">
 	
-d3.csv('https://raw.githubusercontent.com/jerryji1123/core_studio/master/Demo/All-Warriors%20vs.%20Nets.%202_6_20%20-%20Sheet1%20(2).csv')
+d3.csv('https://raw.githubusercontent.com/jerryji1123/core_studio/master/Demo/All-Warriors%20vs.%20Nets.%202_6_20%20-%20Sheet1%20(3).csv')
 	.then(
 		function(data){
 			console.log(data)
@@ -43,22 +45,27 @@ d3.csv('https://raw.githubusercontent.com/jerryji1123/core_studio/master/Demo/Al
 //declare a function 
 function viewData (data, location_id) {
 	//select the element that I will write the data in
-	el = document.querSelector('#'+location_id)
+	el = document.querSelector('#main'+location_id)
+	//will take the id of whatever is passed through
 	//write everything as text to this location
 
-	//select just one item and it's name
-	//el.innerHTML = data [0]['The Name of Player']
+	//select just one item
+	// el.innerHTML = data[0]['The Name of Player']
 
 	//iterate over each item and do something with its attributes
 	data.forEach(function(item){
 		div =document.createElement('div')
 		div.setAttribute('class','card')
-
-		el.innerHTML += item['The Name of Player']
-
+		div.classList.add(item['letter'])
 		h1 = document.createElement('h1')
 		h1.innerHTML=item ['The Name of Player']
-		div.appendChild(h1)
+		mask = document.createElement('div')
+		mask.setAttribute('class','mask')
+		img = document.createElement('img')
+		img.src=item ['cover_img']
+		mask.appendChild(img)
+		div.appendChild(mask)
+		div.appendChild(img)
 		el.appendChild(div)
 
 	})
