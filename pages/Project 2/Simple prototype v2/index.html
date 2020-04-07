@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Home</title>
+	<link rel="stylesheet" href="./css/index.css">
+	<script src="./js/jquery-1.8.3.min.js"></script>
+</head>
+
+<body class="home bodybox">
+	<div class="menubox">
+		<a href="javascript:;" class="menu"></a>
+		<div class="bar">
+			<a href="./index.html">HOME</a>
+			<a href="./about.html">ABOUT</a>
+			<a href="./main.html">DATA</a>
+		</div>
+	</div>
+	<div class="topline">
+		<p><span>NETS V.S. WARRIORS</span></p>
+	</div>
+	<div class="content btn-group">
+		<div class="btn">
+			<div class="fl contxt">
+				<p class="tit">MVP<br>
+				Caris LeVert</p>
+				<div class="btn-group">
+					<span class="btn">
+						23<br>PTS
+					</span>
+					<span class="btn">
+						4<br>REB
+					</span>
+					<span class="btn">
+						8<br>AST
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="png fl">
+			<img src="./images/mvp2.jpg" alt="">
+		</div>
+	</div>
+<script>
+		$(function () {
+			$('.menu').on('click', function () {
+				if (!$(this).parents('.menubox').hasClass('show')) {
+					$(this).parents('.menubox').addClass('show')
+
+				} else {
+					$(this).parents('.menubox').removeClass('show')
+				}
+			})
+		})
+</script>
+</body>
+</html>

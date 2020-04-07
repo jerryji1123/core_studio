@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ABOUT</title>
+	<link rel="stylesheet" href="./css/index.css">
+	<script src="./js/jquery-1.8.3.min.js"></script>
+</head>
+
+<body class="about bodybox">
+	<div class="menubox">
+		<a href="javascript:;" class="menu"></a>
+		<div class="bar">
+			<a href="./index.html">HOME</a>
+			<a href="./about.html">ABOUT</a>
+			<a href="./main.html">DATA</a>
+		</div>
+	</div>
+	<div class="topline">
+		<p><span>NETS V.S. WARRIORS</span></p>
+	</div>
+	<div class="content">
+		<p class="tit">ABOUT</p>
+		<div class="aboutbox">
+			<div class="fn-clear btn-group">
+				<div class="png fl btn">
+					<img src="./images/8816dca5c9fa9c319279b15dbed4c05c.jpeg" alt="">
+				</div>
+				<div class="contxt btn">
+					<p>This was an NBA basketball game that happens on February 6, 2020.
+						<br>
+						<br>
+						The two NBA basketball teams were Nets and Warriors.
+						<br> 
+						<br>
+						With Caris LeVeret’s leadership, Nets beats the Warriors in their home.
+						<br>
+						<br>
+						Location: 620 Atlantic Ave, Brooklyn, NY 11217
+						<br>
+						Match Date: 2/6/20 8:30PM
+						<br>
+						<br>
+						<a class="fr">Learn more about Barclays Center+</a>
+					</p>
+					<div class="pngbox fn-clear">
+						<img class="fr" src="./images/warriors1.png" alt="">
+						<img class="fr" src="./images/nets1.png" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<script>
+		$(function () {
+			$('.menu').on('click', function () {
+				if (!$(this).parents('.menubox').hasClass('show')) {
+					$(this).parents('.menubox').addClass('show')
+
+				} else {
+					$(this).parents('.menubox').removeClass('show')
+				}
+			})
+		})
+	</script>
+</body>
+
+</html>
