@@ -112,18 +112,18 @@ d3.csv('https://raw.githubusercontent.com/3milychu/demo/master/data.csv')
 .then(function(data){
 	console.log(data)
 	displayFeatured(data[0], '#featured')
-	counter = -2
+	counter = 1
 	setInterval(function(){
 		if(counter == 2){
 			counter = 0
 		} else {
-			counter = counter + 2
+			counter = counter + 1
 		}
-		featured = [1,3,5]
+		featured = [0,2,4]
 		ref = featured[counter]
 		console.log(ref)
 		displayFeatured(data[ref], '#featured')
-	},10000)
+	},4000)
 
 	displayAll(data,'section')
 	console.log(random)
