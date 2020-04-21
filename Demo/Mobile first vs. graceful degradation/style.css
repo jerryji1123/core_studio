@@ -1,2 +1,27 @@
+.column{
+	padding:69px;
+	float: left;
+	width: 25%;
+}
 
+#a{
+	background-color: white;
+	height:100em;
+}
 
+#b{
+	background-color: red;
+	height:100em;
+}
+
+#c{
+	background-color: black;
+	color:white;
+	height:100em;
+}
+
+@media screen and (max-width: 800px){
+	.column{
+		width: 100%;
+	}
+}
