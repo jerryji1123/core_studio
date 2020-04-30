@@ -1,0 +1,234 @@
+body,
+html {
+  background-color: #f6f0e3;
+  max-width: 640px;
+  margin: auto;
+  display: block;
+  font-family: Helvetica bold;
+}
+
+#index {
+  position: fixed;
+  max-width: 640px;
+  width: 100%;
+  height: 100%;
+  background-color: #f6f0e3;
+}
+#index h1 {
+  padding: 50vw 0;
+  font-size: 75px;
+  color: #416d85;
+  text-align: center;
+  font-family: Helvetica;
+  font-style: bold;
+}
+#index sub {
+  font-size: 12px;
+  color: #F79D2D;
+  text-align: center;
+  bottom: 180px;
+  left: 120px;
+}
+#index img {
+  background-color: #f6f0e3;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.back {
+  position: absolute;
+  left: 0.73170732rem;
+  top: 0.73170732rem;
+}
+#page2 {
+  position: fixed;
+  background-color: #f6f0e3;
+  bottom: 0;
+  overflow: auto;
+  width: 100%;
+  max-width: 640px;
+  margin: auto;
+  display: block;
+  height: 100%;
+}
+#page2 .conbox {
+  padding: 40px 0.73170732rem;
+  background: transparent url('../images/page2bj.png') no-repeat top scroll;
+  background-size: cover;
+  margin-top: 3.8rem;
+  margin-left: 0.73170732rem;
+  margin-right: 0.73170732rem;
+  border-radius: 2%;
+}
+#page2 .conbox .tit {
+  font-size: 20px;
+  color: #c2390d;
+  text-align: left;
+  line-height: 40px;
+}
+#page2 .conbox .desc {
+  font-size: 15px;
+  color: #416d85;
+  text-align: left;
+  line-height: 40px;
+}
+#page2 .conbox .line {
+  padding: 30px 0;
+  text-align: left;
+}
+#page2 .conbox .line em {
+  width: 25px;
+  height: 25px;
+  background: #ccc;
+  border-radius: 50%;
+  vertical-align: middle;
+  display: inline-block;
+}
+#page2 .conbox .line em img {
+  display: none;
+  padding-bottom: 100px;
+}
+#page2 .conbox .line span {
+  color: #416d85;
+  padding-left: 5px;
+  padding-bottom:100px;
+  font-size: 11px;
+  display: inline-block;
+  line-height: 40px;
+}
+#page2 .footbtns {
+  color: #416d85;
+  font-size: 20px;
+  padding: 0.73170732rem;
+  text-align: right;
+}
+#page2 .footbtns img {
+  margin-left: 10px;
+}
+
+#mapbox {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent url('../images/mapbj.png') repeat top scroll;
+  background-size: cover;
+}
+#mapbox #map {
+  background: none;
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+#mapbox #map h2 {
+  font-size: 40px;
+  color: #416d85;
+  text-align: center;
+  margin: 0.73170732rem auto;
+  font-weight: bold;
+  font-style: oblique;
+}
+#mapbox #map .refresh {
+  width: 0.73170732rem;
+  height: 0.73170732rem;
+}
+#mapbox #map .contxt {
+  position: absolute;
+  left: 120px;
+  top: 300px;
+  background-color: #416d85;
+  border-radius: 19px;
+  font-size: 15px;
+  text-align: center;
+  padding: 30px 20px;
+  color: #fff;
+}
+#mapbox #map .refresh {
+  position: absolute;
+  right: 60px;
+  top: 130px ;
+}
+
+#mapbox #map .menubtn {
+  position: absolute;
+  display: block;
+  bottom: 0;
+  left: 0;
+  background-color: #416d85;
+  color: #fff;
+  font-size: 23px;
+  font-family: Helvetica;
+  line-height: 75px;
+  text-align: center;
+  border-top-left-radius: 0.48780488rem;
+  border-top-right-radius: 0.48780488rem;
+  width: 85%;
+  margin: 0 0.73170732rem;
+  box-sizing: border-box;
+}
+#mapbox #map .place {
+  position: absolute;
+  left: 170px;
+  top: 400px;
+}
+
+#menubtn {
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  background-color: #416d85;
+  left: 0;
+  top: 100vh;
+}
+#menubtn .line {
+  display: block;
+  margin: 0.73170732rem;
+  height: 2px;
+  background-color: #fff;
+  margin-bottom: 6.09756098rem;
+}
+#menubtn .btns {
+  color: #fff;
+  font-size: 0.6097561rem;
+  text-align: center;
+  display: block;
+  margin-bottom: 0.73170732rem;
+}
+#menubtn .sure {
+  color: #f8b831;
+  font-weight: bold;
+}
+#menubtn .loginout {
+  display: block;
+  width: 7.90243902rem;
+  position: absolute;
+  bottom: 0.73170732rem;
+  border-radius: 0.48780488rem;
+  left: 50%;
+  transform: translate(-50%, 0);
+  height: 1.46341463rem;
+  font-size: 0.73170732rem;
+  color: #416d85;
+  background-color: #fff;
+  line-height: 1.46341463rem;
+  text-align: center;
+}
+
+.menubtns {
+  position: absolute;
+  left: 0;
+  top: 0.73170732rem;
+  width: 1.46341463rem;
+  height: 1.46341463rem;
+}
+#menubtn.leftmenu {
+  width: 90%;
+  top: 0;
+  left: -90%;
+}
