@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="./../Public/css/index.css">
+    <link rel="stylesheet" href="./../Public/css/base.css">
+    <script src='./../Public/js/flexbile.min.js'></script>
+    <script src="./../Public/js/jquery-1.8.3.min.js"></script>
+</head>
+
+<body id="mapbox">
+    <div id='map'>
+        <h2>Cigarette Butts<br>
+            Collecting Points
+        </h2>
+
+        <a class="refresh">
+            <img src="../Public/images/refresh.png" alt="">
+        </a>
+
+        <a class="place">
+            <div class="contxt">
+                <h3>66 West 12th <br>
+                    10min away
+                </h3>
+            </div>
+            <img src="../Public/images/place.png" alt="">
+        </a>
+
+        <a href="javascript:;" class="menubtn">Menu</a>
+    </div>
+    <div id="menubtn">
+        <p class="line"></p>
+        <a href="./map.html" class="btns sure">Map</a>
+        <p class="title">Discover the restaurant near the collecting point</p>
+        <div id="picContent" class="pic-content">
+            <ul>
+                <li><img src="./../Public/images/Screen Shot 2020-05-02 at 10.16.30 PM.png" alt=""></li>
+                <li><img src="./../Public/images/Screen Shot 2020-05-02 at 10.17.41 PM.png" alt=""></li>
+                <li><img src="./../Public/images/Screen Shot 2020-05-02 at 10.18.02 PM.png" alt=""></li>
+                <li><img src="./../Public/images/Screen Shot 2020-05-02 at 10.19.06 PM.png" alt=""></li>
+                <li><img src="./../Public/images/Screen Shot 2020-05-02 at 10.19.46 PM.png" alt=""></li>
+            </ul>
+        </div>
+        <a href="javascript:;" class="loginout">Log Out</a>
+    </div>
+    <div class="shadowmap">
+        <img src="./../Public/images/Image-3.gif" alt="">
+    </div>
+    <script>
+        $(function () {
+            setTimeout(function () {
+                $('.shadowmap ').fadeOut(500)
+            }, 1000)
+            $('.refresh').on('click', function () {
+                place()
+            })
+            $('.menubtn').on('click', function () {
+                $('#menubtn').animate({
+                    'top': 0
+                });
+            })
+            $('.loginout').on('click', function () {
+                $('#menubtn').animate({
+                    'top': '100vh'
+                });
+                window.location.href = './index.html'
+            })
+
+            function place() {
+                $('.shadowmap ').fadeIn(500, function () {
+                    setTimeout(function () {
+                        $('.shadowmap ').fadeOut(500)
+                        var datas = [{
+                            txt: `66 West 12th 10 min away `
+                        }, {
+                            txt: `6 East 16th Street 8min away`
+                        }, {
+                            txt: `Academic Entrance 63 Fifth Ave 3min away`
+                        }]
+
+                        function random(lower, upper) {
+                            return Math.floor(Math.random() * (upper - lower)) + lower;
+                        }
+                        var c = Math.floor((Math.random() * datas.length));
+                        if (datas[c].txt == $('.contxt').text()) {
+                            c = Math.floor((Math.random() * datas.length));
+                        }
+                        $('.contxt').text(datas[c].txt);
+                        $('.shadowmap ').fadeOut(500)
+                        var y = random(30, 50);
+                        var x = random(20, 80);
+                        $('.place').css({
+                            left: x + 'vw',
+                            top: y + 'vh'
+                        })
+                    }, 1000)
+                })
+
+            }
+        })
+    </script>
+</body>
+
+</html>
